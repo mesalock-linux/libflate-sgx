@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use rle_decode_fast::rle_decode;
 use std::cmp;
 use std::io;

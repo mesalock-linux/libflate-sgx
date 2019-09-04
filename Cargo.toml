@@ -15,10 +15,15 @@ travis-ci = {repository = "sile/libflate"}
 codecov = {repository = "sile/libflate"}
 
 [dependencies]
-adler32 = "1"
-crc32fast = "1"
-rle-decode-fast = "1.0.0"
-take_mut = "0.2.2"
+adler32 = { git = "https://github.com/mesalock-linux/adler32-rs-sgx" }
+crc32fast = { git = "https://github.com/mesalock-linux/rust-crc32fast-sgx" }
+rle-decode-fast = { git = "https://github.com/mesalock-linux/rle-decode-helper-sgx" }
+take_mut = { git = "https://github.com/mesalock-linux/take_mut-sgx" }
+sgx_tstd = { rev = "v1.0.8", git = "https://github.com/baidu/rust-sgx-sdk.git", optional = true }
 
 [dev-dependencies]
-clap = "2"
+#clap = "2"
+
+[features]
+default = ["mesalock_sgx"]
+mesalock_sgx = ["sgx_tstd"]

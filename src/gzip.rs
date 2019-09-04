@@ -19,7 +19,9 @@
 //!
 //! assert_eq!(decoded_data, b"Hello World!");
 //! ```
+use std::prelude::v1::*;
 use std::{ffi::CString, io, time};
+use std::untrusted::time::SystemTimeEx;
 
 use checksum;
 use deflate;

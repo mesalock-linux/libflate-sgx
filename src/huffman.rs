@@ -1,3 +1,4 @@
+use std::prelude::v1::*;
 use std::cmp;
 /// Length-limited Huffman Codes
 ///
@@ -247,6 +248,7 @@ mod ordinary_huffman_codes {
 }
 mod length_limited_huffman_codes {
     use std::mem;
+    use std::prelude::v1::*;
 
     #[derive(Debug, Clone)]
     struct Node {
